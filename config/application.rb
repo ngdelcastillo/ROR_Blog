@@ -38,5 +38,10 @@ module Pro1
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Change layout for signing in
+    config.to_prepare do
+      Devise::SessionsController.layout "sign"
+    end
   end
 end

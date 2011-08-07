@@ -1,4 +1,9 @@
 Pro1::Application.routes.draw do
+  resources :blog_entries
+
+  devise_for :users
+
+  root :to => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
